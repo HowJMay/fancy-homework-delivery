@@ -3,13 +3,16 @@
   <body>
     <h1>袁揚皓的作業</h1>
 
-    <p id="info">請按下面的按鈕</p>
-
-    <p id="article"></p>
+    <p id="info">
+      右鍵點選檢視網頁原始碼(View Page Source)，如果沒有的話請按下面的按鈕
+    </p>
 
     <button onclick="button_click_event()" id="btn">
       點我點我 ⋋╏ ❛ ◡ ❛ ╏⋌
     </button>
+    <p id="article"></p>
+
+    <!--作業連結在這邊喔喔喔，快點複製這個網址-->
 
     <script>
       var hw_article = "作業內容";
@@ -17,13 +20,6 @@
       function button_click_event() {
         document.getElementById("btn").innerHTML = "感謝您的配合";
         document.getElementById("article").innerHTML = hw_article;
-        fetch("http://example.com/movies.json").then(function (response) {
-          if (response.ok) {
-            document.getElementById("info").innerHTML = "信箱也有pdf版作業喔";
-          } else {
-            document.getElementById("info").innerHTML = "寄信失敗";
-          }
-        });
       }
     </script>
   </body>
